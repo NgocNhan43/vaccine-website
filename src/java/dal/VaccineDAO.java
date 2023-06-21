@@ -18,61 +18,60 @@ public class VaccineDAO extends DBContext {
     PreparedStatement ps = null;
     ResultSet rs = null;
 
-	public static int getIdVacByIdAP(int int1) {
-		int idVaccine = -1;
-		String getIdSql = "Select [idVaccineAP] from [vaccine].[dbo].[appointment_provision] where [idAppointmentProvision] = "
-				+ int1;
-		try (Connection conn = getConnect()) {
-			PreparedStatement stmt = conn.prepareStatement(getIdSql);
-			ResultSet rs = stmt.executeQuery();
-			while (rs.next()) {
-				idVaccine = rs.getInt(1);
-				return idVaccine;
-			}
-		} catch (Exception ex) {
-			Logger.getLogger(VaccineDAO.class.getName()).log(Level.SEVERE, null, ex);
-		}
-		// TODO Auto-generated method stub
-		return idVaccine;
-	}
+    public static int getIdVacByIdAP(int int1) {
+        int idVaccine = -1;
+        String getIdSql = "Select [idVaccineAP] from [vaccine].[dbo].[appointment_provision] where [idAppointmentProvision] = "
+                + int1;
+        try ( Connection conn = getConnect()) {
+            PreparedStatement stmt = conn.prepareStatement(getIdSql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                idVaccine = rs.getInt(1);
+                return idVaccine;
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(VaccineDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // TODO Auto-generated method stub
+        return idVaccine;
+    }
 
-	public static java.sql.Date getVacTimeByIdAP(int int1) {
-		java.sql.Date date = null;
-		String getIdSql = "Select [appointmentDateAt] from [vaccine].[dbo].[appointment_provision] where [idAppointmentProvision] = "
-				+ int1;
-		try (Connection conn = getConnect()) {
-			PreparedStatement stmt = conn.prepareStatement(getIdSql);
-			ResultSet rs = stmt.executeQuery();
-			while (rs.next()) {
-				date = rs.getDate(1);
-				return date;
-			}
-		} catch (Exception ex) {
-			Logger.getLogger(VaccineDAO.class.getName()).log(Level.SEVERE, null, ex);
-		}
-		// TODO Auto-generated method stub
-		return date;
-	}
+    public static java.sql.Date getVacTimeByIdAP(int int1) {
+        java.sql.Date date = null;
+        String getIdSql = "Select [appointmentDateAt] from [vaccine].[dbo].[appointment_provision] where [idAppointmentProvision] = "
+                + int1;
+        try ( Connection conn = getConnect()) {
+            PreparedStatement stmt = conn.prepareStatement(getIdSql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                date = rs.getDate(1);
+                return date;
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(VaccineDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // TODO Auto-generated method stub
+        return date;
+    }
 
-	public static int getIdHosByIdAP(int int1) {
-		// TODO Auto-generated method stub
-		int hos = -1;
-		String getIdHosSql = "Select [idHAP] from [vaccine].[dbo].[appointment_provision] where [idAppointmentProvision] = "
-				+ int1;
-		try (Connection conn = getConnect()) {
-			PreparedStatement stmt = conn.prepareStatement(getIdHosSql);
-			ResultSet rs = stmt.executeQuery();
-			while (rs.next()) {
-				hos = rs.getInt(1);
-				return hos;
-			}
-		} catch (Exception ex) {
-			Logger.getLogger(VaccineDAO.class.getName()).log(Level.SEVERE, null, ex);
-		}
-		// TODO Auto-generated method stub
-		return hos;
-	}
-
+    public static int getIdHosByIdAP(int int1) {
+        // TODO Auto-generated method stub
+        int hos = -1;
+        String getIdHosSql = "Select [idHAP] from [vaccine].[dbo].[appointment_provision] where [idAppointmentProvision] = "
+                + int1;
+        try ( Connection conn = getConnect()) {
+            PreparedStatement stmt = conn.prepareStatement(getIdHosSql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                hos = rs.getInt(1);
+                return hos;
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(VaccineDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // TODO Auto-generated method stub
+        return hos;
+    }
 
     public List<Vaccine> getAllVaccine() {
         List<Vaccine> list = new ArrayList<>();
@@ -113,13 +112,14 @@ public class VaccineDAO extends DBContext {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } 
+        }
 
         return vaccines;
     }
+
     public static int getIdVacByName(String nameVaccine) {
-        String sql = "SELECT [idVaccine] FROM [vaccine].[dbo].[vaccine] WHERE [name] = ?";
-        try (Connection conn = getConnect()) {
+        String sql = "SELECT [idVaccine] FROM [dbo].[vaccine] WHERE [name] = ?";
+        try ( Connection conn = getConnect()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, nameVaccine); // Set the parameter value
             ResultSet rs = stmt.executeQuery();
@@ -305,10 +305,10 @@ public class VaccineDAO extends DBContext {
         return list;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 //		System.out.println(getIdVacFrIdAP(2));
-		System.out.println(getVacTimeByIdAP(5));
+        System.out.println(getIdVacByName("vaccine 2"));
 //		System.out.println(getIdHosByIdAP(2));
-	}
+    }
 
 }
