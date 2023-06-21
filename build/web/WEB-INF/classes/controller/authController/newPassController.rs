@@ -1,0 +1,2 @@
+controller.newPass
+controller.newPassController
