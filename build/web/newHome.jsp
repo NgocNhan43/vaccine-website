@@ -95,6 +95,10 @@
                                                     </li>
                                                     <li><a href="03_01_services.html">Booking Schedules</a></li>
                                                     <li class=""><a href="#">Hospitals</a>
+                                                          <ul>
+                                                            <li><a href="HospitalController ">List of hospital information</a></li>
+                                                            
+                                                        </ul>
                                                        
                                                     </li>
                                                 </ul>

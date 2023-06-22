@@ -67,7 +67,7 @@ public class loginController extends HttpServlet {
                     if (user.getRole() == 1) {
                         // 1 la user
                         // 2 la admin
-                        response.sendRedirect("newHome.jsp");
+                        response.sendRedirect("newHome1.jsp");
                     } else if (user.getRole() == 2) {
                         response.sendRedirect("login.jsp");
                     }

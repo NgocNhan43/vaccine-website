@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBContext {
 
 	public static String DRIVERNAME = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	public static String DBURL = "jdbc:sqlserver://NGOCNHAN\\SQLEXPRESS:1433;databaseName=vaccine4;encrypt=false";
+	public static String DBURL = "jdbc:sqlserver://NGOCNHAN\\SQLEXPRESS:1433;databaseName=vaccine;encrypt=false";
 	public static String USERDB = "admin";
 	public static String PASSDB = "1";
 

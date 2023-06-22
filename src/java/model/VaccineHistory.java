@@ -3,77 +3,77 @@ package model;
 import java.sql.Date;
 
 public class VaccineHistory {
-	   private String userName;
-	   private Boolean gender;
-	   private String Hospital;
-	   private Date date;
-	   private String vaccine;
-	   private double price;
 
-	    public VaccineHistory() {
-	    }
+    private String userName;
+    private Boolean gender;
+    private String Hospital;
+    private Date date;
+    private String vaccine;
+    private double price;
 
-	    public VaccineHistory(String userName, Boolean gender, String Hospital, Date date, String vaccine, double price) {
-	        this.userName = userName;
-	        this.gender = gender;
-	        this.Hospital = Hospital;
-	        this.date = date;
-	        this.vaccine = vaccine;
-	        this.price = price;
-	    }
+    public VaccineHistory() {
+    }
 
-	    public String getUserName() {
-	        return userName;
-	    }
+    public VaccineHistory(String userName, Boolean gender, String Hospital, Date date, String vaccine, double price) {
+        this.userName = userName;
+        this.gender = gender;
+        this.Hospital = Hospital;
+        this.date = date;
+        this.vaccine = vaccine;
+        this.price = price;
+    }
 
-	    public void setUserName(String userName) {
-	        this.userName = userName;
-	    }
+    public String getUserName() {
+        return userName;
+    }
 
-	    public Boolean getGender() {
-	        return gender;
-	    }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	    public void setGender(Boolean gender) {
-	        this.gender = gender;
-	    }
+    public Boolean getGender() {
+        return gender;
+    }
 
-	    public String getHospital() {
-	        return Hospital;
-	    }
+    public void setGender(Boolean gender) {
+        this.gender = gender;
+    }
 
-	    public void setHospital(String Hospital) {
-	        this.Hospital = Hospital;
-	    }
+    public String getHospital() {
+        return Hospital;
+    }
 
-	    public Date getDate() {
-	        return date;
-	    }
+    public void setHospital(String Hospital) {
+        this.Hospital = Hospital;
+    }
 
-	    public void setDate(Date date) {
-	        this.date = date;
-	    }
+    public Date getDate() {
+        return date;
+    }
 
-	    public String getVaccine() {
-	        return vaccine;
-	    }
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
-	    public void setVaccine(String vaccine) {
-	        this.vaccine = vaccine;
-	    }
+    public String getVaccine() {
+        return vaccine;
+    }
 
-	    public double getPrice() {
-	        return price;
-	    }
+    public void setVaccine(String vaccine) {
+        this.vaccine = vaccine;
+    }
 
-	    public void setPrice(double price) {
-	        this.price = price;
-	    }
+    public double getPrice() {
+        return price;
+    }
 
-	    @Override
-	    public String toString() {
-	        return "VaccineHistory{" + "userName=" + userName + ", gender=" + gender + ", Hospital=" + Hospital + ", date=" + date + ", vaccine=" + vaccine + ", price=" + price + '}';
-	    }
-	    
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
-	}
+    @Override
+    public String toString() {
+        return "VaccineHistory{" + "userName=" + userName + ", gender=" + gender + ", Hospital=" + Hospital + ", date=" + date + ", vaccine=" + vaccine + ", price=" + price + '}';
+    }
+
+}

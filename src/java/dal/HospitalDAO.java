@@ -113,8 +113,13 @@ public class HospitalDAO {
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
             while (rs.next()) {
-                list.add(new Hospital(rs.getInt(1), rs.getString(2), rs.getString(3),
-                        rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7)));
+                list.add(new Hospital(rs.getInt(1), 
+                        rs.getString(2), 
+                        rs.getString(3),
+                        rs.getString(4), 
+                        rs.getString(5), 
+                        rs.getString(6), 
+                        rs.getString(7)));
             }
         } catch (Exception e) {
         }
@@ -278,15 +283,26 @@ public static int getIdHByName(String name) {
     }
 	
     public static void main(String[] args) {
-		File fi = new File("C:\\vaccine\\23-05-2023-uncome.xls");
-		String date = fi.getName().substring(0, 10);
+//		File fi = new File("C:\\vaccine\\23-05-2023-uncome.xls");
+//		String date = fi.getName().substring(0, 10);
 
 
 //		
 //		 Hospital t  = HospitalDAO.findHospital("Thang Long");
 //		
 //		System.out.println(HospitalDAO.getAllHospital());
+
+
+HospitalDAO dao = new HospitalDAO();
+
+            
+        List<Hospital> list = dao.getAllHospital();
+        for (Hospital o : list ) {
+            System.out.println("\n"+o);
+        }
 	}
+    
+       
 
 
 

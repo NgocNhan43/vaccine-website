@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="plugin/lightgallery/lightgallery.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pop-up.css">
+       <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/hospital.css" rel="stylesheet" type="text/css"/>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -107,16 +111,24 @@
                                     </div>
 
                                     <!--SEARCH AND APPOINTMENT-->
-                                    <div class="uni-search-appointment">
-                                        <ul>
-                                            <li class="un-btn-search">
-                                                <i class="fa fa-search" aria-hidden="true"></i>
-                                            </li>
-                                            <li class="uni-btn-appointment">
-                                                <a href="login.jsp" >Login</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="uni-search-appointment">
+                                            <ul>
+                                                <li class="un-btn-search">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </li>
+                                                <li class="uni-btn-appointment dropdown">
+                                                    <a class="dropdown-toggle" href="#" role="button" id="user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas fa-user dropdown-icon"></i> Hello 
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="user-dropdown">
+                                                        <a class="dropdown-item" href=""><i class="fas fa-user"></i> Profile</a>
+                                                         <a class="dropdown-item" href="VaccineHistoryController"><i class="fas fa-history"></i> History</a>
+                                                        <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a>
+                                                        <a class="dropdown-item" href="logoutController"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                 </div>
                             </div>
 
